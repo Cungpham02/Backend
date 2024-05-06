@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<script src="../js/jquery.js"></script>
+<!-- <script>
+    $(document).ready(function(){
+        $("#Form_Login").submit(function(e){
+            e.preventDefault()
+            var form={
+                username:$("#username").val(),
+                password:$("#password").val(),
+            }
+            console.log(form);
+            $.ajax({
+                url:"/login/store",
+                type:"POST",
+                data:form,
+                success:function(data){
+                    console.log(data);
+                    if(data.isSuccess){
+                        
+                    }else{
+                        alert("Đăng nhập thất bại")
+                    }
+                }
+            })
+        })
+    })
+</script> -->
+<body>
+    <form id="Form_Login" action="/login/store" method="POST">
+        <input type="text" name="username" id="username" placeholder="Username..."/>
+        <input type="password" name="password" id="password" placeholder="password..."/>
+        <button type="submit" id="btn_login">Đăng nhập</button>
+    </form>
+</body>
+</html>
